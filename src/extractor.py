@@ -22,14 +22,14 @@ def extraer_texto_pdf(ruta_pdf: str) -> str:
                 
                 if texto_pagina:
                     texto_completo += texto_pagina + "\n"
-                    print(f"   ✅ Página {i+1} extraída con éxito.")
+                    print(f"    Página {i+1} extraída con éxito.")
                 else:
-                    print(f"   ⚠️ Página {i+1} vacía o es una imagen escaneada.")
+                    print(f"    Página {i+1} vacía o es una imagen escaneada.")
                     
     except FileNotFoundError:
-        return "❌ Error: No encontré el archivo. Revisa la ruta."
+        return " Error: No encontré el archivo. Revisa la ruta."
     except Exception as e:
-        return f"❌ Error inesperado: {str(e)}"
+        return f" Error inesperado: {str(e)}"
 
     return texto_completo
 
